@@ -1,6 +1,10 @@
-<ui-select style="width: 300px;" value="0" tabindex="-1" id="select"></ui-select>
-<ui-button style="width: 100px;" class="red" tabindex="-1" id="update">update</ui-button>
-<ui-button style="width: 100px;" class="blue" tabindex="-1" id="run">Run</ui-button>
+<div class="layout horizontal">
+  <ui-select class="flex-1" value="0" tabindex="-1" id="select" style="height:50px"></ui-select>
+</div>
+<div class="layout horizontal">
+  <ui-button class="red flex-1" tabindex="-1" id="update" style="height:50px">update</ui-button>
+  <ui-button class="blue flex-1" tabindex="-1" id="run" style="height:50px">Run</ui-button>
+</div>
 <ui-markdown id="markdown"></ui-markdown>
 <div class="item" id="loading">
   <ui-loader style="background-color: rgba(0, 0, 0, 0.3);">Loading</ui-loader>

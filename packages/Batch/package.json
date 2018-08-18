@@ -18,6 +18,6 @@
   },
   "scene-script": "./src/walker.js",
   "reload": {
-    "ignore": ["src/walker.js"]
+    "ignore": []
   }
 }
