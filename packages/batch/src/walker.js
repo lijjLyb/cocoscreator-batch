@@ -11,5 +11,8 @@ node.parent = canvas;
       return;
     }
     event.reply(null, "script runned");
+  },
+  'empty': function (event) {
+    event.reply(null, "change success");
   }
 };

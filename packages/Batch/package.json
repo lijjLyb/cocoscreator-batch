@@ -16,8 +16,5 @@
     "width": 400,
     "height": 300
   },
-  "scene-script": "./src/walker.js",
-  "reload": {
-    "ignore": []
-  }
+  "scene-script": "./src/walker.js"
 }
