@@ -1,27 +1,7 @@
-
-<ui-markdown id="markdown">
-  ## Code and Syntax Highlighting
-
-  Inline `code` has `back-ticks around` it.
-
-  Blocks of code:
-
-  ```javascript
-  var s = "JavaScript syntax highlighting";
-  alert(s);
-  ```
-
-  ```python
-  s = "Python syntax highlighting"
-  print s
-  ```
-
-  ```
-  No language indicated, so no syntax highlighting in Markdown Here (varies on Github).
-  But let's throw in a <b>tag</b>.
-  ```
-</ui-markdown>
+<ui-select style="width: 300px;" value="0" tabindex="-1" id="select"></ui-select>
+<ui-button style="width: 100px;" class="red" tabindex="-1" id="update">update</ui-button>
 <ui-button style="width: 100px;" class="blue" tabindex="-1" id="run">Run</ui-button>
+<ui-markdown id="markdown"></ui-markdown>
 <div class="item" id="loading">
   <ui-loader style="background-color: rgba(0, 0, 0, 0.3);">Loading</ui-loader>
 </div>
