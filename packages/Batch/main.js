@@ -13,15 +13,7 @@ module.exports = {
   messages: {
     'open' () {
       // open entry panel registered in package.json
-      Editor.Panel.open('Batch');
-    },
-    'say-hello' () {
-      Editor.log('Hello World!');
-      // send ipc message to panel
-      Editor.Ipc.sendToPanel('Batch', 'Batch:hello');
-    },
-    'clicked' () {
-      Editor.log('Button clicked!');
+      Editor.Panel.open('batch');
     }
   },
 };

@@ -1,22 +1,23 @@
 {
-  "name": "Batch",
+  "name": "batch",
   "version": "0.0.1",
   "description": "Write scripts to bulk changes in Cocos Creator",
   "author": "lijjLyb lijjlyb@sohu.com",
   "main": "main.js",
   "main-menu": {
-    "i18n:MAIN_MENU.package.title/Batch/open": {
-      "message": "Batch:open"
-    },
-    "i18n:MAIN_MENU.package.title/Batch/hello": {
-      "message": "Batch:say-hello"
+    "i18n:MAIN_MENU.package.title/batch/打开": {
+      "message": "batch:open"
     }
   },
   "panel": {
     "main": "panel/index.js",
     "type": "dockable",
-    "title": "Batch",
+    "title": "batch",
     "width": 400,
     "height": 300
+  },
+  "scene-script": "./src/walker.js",
+  "reload": {
+    "ignore": ["src/walker.js"]
   }
 }
