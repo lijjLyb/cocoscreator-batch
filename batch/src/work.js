@@ -17,7 +17,6 @@ module.exports = {
 
   runScript(cb) {
     // !! 这里如果执行过一个脚本后马上切换脚本再运行的话 会把第一个脚本再执行一次
-    // 被逼无奈这么写了 以后查明原因修改
     setTimeout(()=>{
       Editor.Scene.callSceneScript('batch', 'runScript', function (err, msg) {
         if (err) {
