@@ -21,22 +21,21 @@ Editor.Panel.extend({
   ready() {
 
     this.updateSelect();
+    this.updateScript();
 
     this.$btn.addEventListener('confirm', () => {
       this.$loading.style.display = 'block';
-      var script = Work.getScript(this.$select.value);
-      Work.exchangeSceneWalker(script);
-      Work.runScript(() => {
-        this.$loading.style.display = 'none';
-      });
+      this.runScript();
     });
 
     this.$update.addEventListener('confirm', () => {
       this.updateSelect();
+      this.updateScript();
     });
 
     this.$select.addEventListener('change', () => {
       this.updateMarkDown();
+      this.updateScript();
     });
 
     this.$loading.style.display = 'none';
@@ -82,5 +81,14 @@ Editor.Panel.extend({
     // 文档不相干的小角落有这么个例子 不小心看到了 不然卡半天
     // 神 tm 知道有这个属性
     this.$markdown.value = `\`\`\`javascript\n${script}\n\`\`\``;
+  },
+  updateScript() {
+    var script = Work.getScript(this.$select.value);
+    Work.exchangeSceneWalker(script);
+  },
+  runScript() {
+    Work.runScript(() => {
+      this.$loading.style.display = 'none';
+    });
   }
 });

@@ -17,7 +17,7 @@ module.exports = {
 
   runScript(cb) {
     // !! 这里如果执行过一个脚本后马上切换脚本再运行的话 会把第一个脚本再执行一次
-    setTimeout(()=>{
+    // setTimeout(()=>{
       Editor.Scene.callSceneScript('batch', 'runScript', function (err, msg) {
         if (err) {
           Editor.error(err);
@@ -27,7 +27,7 @@ module.exports = {
         }
         cb();
       });
-    },1000);
+    // },1000);
   },
 
   getFileList() {

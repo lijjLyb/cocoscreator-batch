@@ -1,7 +1,12 @@
+'use strict';
+
 module.exports = {
   'runScript': function (event) {
     try {
-      //loadscript
+      let canvas = cc.find("Canvas");
+let node = new cc.Node();
+node.name = "test";
+node.parent = canvas;
     }
     catch (err) {
       event.reply(err, null);
