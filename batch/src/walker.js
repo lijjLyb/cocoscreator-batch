@@ -5,7 +5,7 @@ module.exports = {
     try {
       let canvas = cc.find("Canvas");
 let node = new cc.Node();
-node.name = "test";
+node.name = "new";
 node.parent = canvas;
     }
     catch (err) {

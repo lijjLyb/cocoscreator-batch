@@ -63,20 +63,14 @@ Editor.Panel.extend({
     for (var i = 0; i < files.length; ++i) {
       this.addSelect(files[i], files[i]);
     }
-    if (files[0]) {
-      this.$select.value = files[0];
-    }
-    else {
-      this.$select.value = "";
-    }
     this.updateMarkDown();
   },
   updateMarkDown() {
-    if (this.$select.value === "") {
+    var script = Work.getScript(this.$select.value);
+    if (!script) {
       this.$markdown.value = "";
       return;
     };
-    var script = Work.getScript(this.$select.value);
     // 坑!! 这里是用 value 属性控制 markdown 显示的文字内容的
     // 文档不相干的小角落有这么个例子 不小心看到了 不然卡半天
     // 神 tm 知道有这个属性
@@ -84,6 +78,7 @@ Editor.Panel.extend({
   },
   updateScript() {
     var script = Work.getScript(this.$select.value);
+    if (!script) return;
     Work.exchangeSceneWalker(script);
   },
   runScript() {
